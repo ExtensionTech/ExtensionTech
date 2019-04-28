@@ -1,0 +1,25 @@
+navigation:
+  - name: Solutions
+    pages:
+      - name: Solutions
+        link: /solutions/
+      - name: Email & Web
+        link: /solutions/email-web.html
+      - name: Video & Voice
+        link: /solutions/video-voice.html
+      - name: Digital Signage
+        link: /solutions/digital-signage.html
+      - name: Backup
+        link: /solutions/backup.html
+      - name: Security
+        link: /solutions/security.html
+      - name: Managed Support
+        link: /solutions/managed-support.html
+  - name: Managed Services
+    pages:
+      - name: Managed Services
+        link: /managed-services.html
+  - name: About Us
+    pages:
+      - name: About Us
+        link: /about.html

@@ -1,0 +1,13 @@
+<nav>
+	{% for item in site.data.navigation.navigation %}
+		<a href="{{ item.pages[0].link }}" {% if page.url == item.pages[0].link %}class="current"{% endif %}>{{ item.name }}</a>
+		{% if item.pages.size > 1 %}
+		
+			<ul>
+			{% for subpage in item.pages offset:1 %}
+				<li><a href="{{ subpage.link }}" {% if page.url == subpage.link %}class="current"{% endif %}>{{ subpage.name }}</a></li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+	{% endfor %}
+</nav>

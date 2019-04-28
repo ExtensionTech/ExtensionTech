@@ -1,7 +1,5 @@
 ---
 ---
-@import "main";
-@import "normalize";
 @font-face {
   font-family: 'Roboto Medium';
   font-style: medium;
@@ -18,3 +16,6 @@
   src: local('Roboto Bold'),
        url('/assets/fonts/Roboto-Bold.ttf') format('truetype'),
 }
+@import "main";
+@import "normalize";
+

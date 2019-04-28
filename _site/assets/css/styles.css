@@ -4,6 +4,12 @@ h1 { font-family: 'Roboto Medium', sans-serif; font-weight: 500; }
 
 .current { color: green; }
 
+#navLogo { height: 4rem; }
+
+nav ul { list-style-type: none; margin: 0; padding: 0; }
+
+nav li { display: inline; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */
 /** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in iOS. */

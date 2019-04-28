@@ -22,3 +22,14 @@ h1 {
 .current {
 	color: green;
 }
+#navLogo {
+	height: 4rem;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline;
+}

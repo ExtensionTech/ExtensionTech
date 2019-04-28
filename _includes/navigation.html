@@ -1,6 +1,8 @@
 <nav>
+	<a href="{{ "/" | relative_url }}"><img id="navLogo" src="{{ "/assets/images/logo.png" | relative_url }}"/></a>
+	<ul>
 	{% for item in site.data.navigation.navigation %}
-		<a href="{{ item.pages[0].link | relative_url}}" {% if page.url == item.pages[0].link %}class="current"{% endif %}>{{ item.name }}</a>
+		<li><a href="{{ item.pages[0].link | relative_url}}" {% if page.url == item.pages[0].link %}class="current"{% endif %}>{{ item.name }}</a>
 		{% if item.pages.size > 1 %}
 		
 			<ul>
@@ -9,5 +11,7 @@
 			{% endfor %}
 			</ul>
 		{% endif %}
+		</li>
 	{% endfor %}
+	</ul>
 </nav>

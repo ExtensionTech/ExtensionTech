@@ -7,7 +7,7 @@ name: css file
   font-weight: 500;
   font-display: auto;
   src: local('Roboto Medium'),
-       url('"{{ "/assets/fonts/Roboto-Medium.ttf" | relative_url }}"') format('truetype'),
+       url({{ '/assets/fonts/Roboto-Medium.ttf' | relative_url }}) format('truetype'),
 }
 @font-face {
   font-family: 'Roboto Bold';

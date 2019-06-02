@@ -15,14 +15,14 @@ layout: compress
 	<link rel="manifest" href="{{ "site.webmanifest" | relative_url }}">
 	<link rel="apple-touch-icon" href="{{ "icon.png" | relative_url }}">
 	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="icon" sizes="192x192" href=""{{ "/assets/images/android-desktop.png" | relative_url }}">
+	<link rel="icon" sizes="192x192" href="{{ "/assets/images/android-desktop.png" | relative_url }}">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Extension Technology">
-	<link rel="apple-touch-icon-precomposed" href=""{{ "/assets/images/ios-desktop.png" | relative_url }}">
-	<meta name="msapplication-TileImage" content=""{{ "/assets/images/touch/ms-touch-icon-144x144-precomposed.png" | relative_url }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ "/assets/images/ios-desktop.png" | relative_url }}">
+	<meta name="msapplication-TileImage" content="{{ "/assets/images/touch/ms-touch-icon-144x144-precomposed.png" | relative_url }}">
 	<meta name="msapplication-TileColor" content="#3372DF">
-	<link rel="shortcut icon" href=""{{ "/assets/images/favicon.png" | relative_url }}">
+	<link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | relative_url }}">
  <style type="text/css">
   
     {% capture critical %}
@@ -32,8 +32,17 @@ layout: compress
     {{ critical | scssify }}
   
   </style>
-	<link media="all" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,black,medium&amp;lang=en">
-	<link media="all" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700&display=swap" >
+   {% if page.critical %}
+   {% capture criticalpage %}
+    {% include {{ page.critical }} %}
+   {% endcapture %}
+   <style>
+    {{ criticalpage }}
+  </style>
+  {% endif %}
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:600&display=swap" rel="stylesheet">
 	<meta name="theme-color" content="#fafafa">
 	
 </head>

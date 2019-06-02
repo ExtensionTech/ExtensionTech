@@ -1,14 +1,14 @@
 body {
 	margin: 0;
 	padding: 2rem 8rem;
-	font-family: "Catamaran";
+	font-family: "Nunito";
 }
 
 a {
 	text-decoration: none;
 	color: #3b3b3b;
 	font-size: 1.7rem;
-	font-weight: 400;
+	font-weight: 600;
 }
 a:hover {
 	color: #0094cc;
@@ -72,10 +72,13 @@ header .header-image {
 	height: 100%;
 }
 h2 {
+	font-family: "Montserrat";
+	font-weight: 900;
 	font-size: 6rem;
 	margin: 0;
 }
 h3 {
 	font-size: 2rem;
-	font-weight: 500;
+	font-family: "Montserrat";
+	font-weight: 900;
 }

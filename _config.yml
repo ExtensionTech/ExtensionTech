@@ -15,11 +15,11 @@ defaults:
     values:
       layout: "default"
 compress_html:
-  clippings: []
+  clippings: all
   comments: []
-  endings: []
+  endings: all
   ignore:
     envs: []
   blanklines: false
   profile: false
-  startings: []
+  startings: [html, head, body]

@@ -1,8 +1,15 @@
 <nav>
-	<a href="{{ "/" | relative_url }}"><img id="navLogo" src="{{ "/assets/images/logo.png" | relative_url }}"/></a>
-	<ul>
+	<a class="brand-logo" href="{{ "/" | relative_url }}">
+		<picture id="responsive-img">
+			<source type="image/webp" media="all" srcset="{{ "/assets/images/logo.webp" | relative_url }}" alt="Extension Logo" >
+			<source type="image/png" media="all" srcset="{{ "/assets/images/logo.png" | relative_url }}" alt="Extension Logo" >
+			<img src="{{ "/assets/images/logo.png" | relative_url }}" alt="Extension Logo" >
+		</picture>
+	</a>
+	<a href="#" class="sidenav-trigger"><img class="hamgburger" alt="mobile nav link" src="{{ "/assets/images/hamburger.png" | relative_url }}"><span>Mobile Nav</span></a>
+	<ul class="ext-nav+">
 	{% for item in site.data.navigation.navigation %}
-		<li><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %}>{{ item.name }}</a>
+		<li><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].class %}class="{{item.pages[0].class}}"{% endif %} >{{ item.name }}</a>
 		{% if item.pages.size > 1 %}
 		
 			<ul>
@@ -15,3 +22,8 @@
 	{% endfor %}
 	</ul>
 </nav>
+
+
+
+
+

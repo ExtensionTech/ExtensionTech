@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+	padding: 2rem 8rem;
+	font-family: "Catamaran";
+}
+
+a {
+	text-decoration: none;
+	color: #3b3b3b;
+	font-size: 1.7rem;
+	font-weight: 400;
+}
+a:hover {
+	color: #0094cc;
+}
+.cta-button-blue {
+	padding: .4rem 2rem;
+	text-align: center;
+	color: white;
+	font-weight: 700;
+	border-radius: 25px;
+	background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+nav .brand-logo {
+	min-width: 30%;
+}
+nav ul {
+	display: none;
+}
+@media only screen and (min-width: 800px) {
+	nav ul {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+nav ul li {
+	padding: 0 1rem;
+}
+.sidenav-trigger span {
+	display: none;
+}
+@media only screen and (min-width: 800px) {
+	nav .hamgburger {
+		display: none;
+	}
+}
+nav ul li ul {
+	display: none;
+}
+header {
+	display: grid;
+	grid-template-areas: 'content image';
+}
+header div {
+	justify-self: start;
+	align-self:  center;
+}
+header .header-image {
+	justify-self: end;
+}
+.header-image img {
+	height: 100%;
+}
+h2 {
+	font-size: 6rem;
+	margin: 0;
+}
+h3 {
+	font-size: 2rem;
+	font-weight: 500;
+}

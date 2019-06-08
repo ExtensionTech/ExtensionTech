@@ -27,4 +27,4 @@ navigation:
     pages:
       - name: Contact Us
         link: /contact-us
-        class: cta-button-blue
+        class: cta-btn-pri

@@ -1,0 +1,23 @@
+@import "vars";
+header {
+	display: grid;
+	grid-template-areas: 'content image';
+}
+header div {
+	justify-self: start;
+	align-self:  center;
+}
+header .header-image {
+	justify-self: end;
+}
+.header-image img {
+	height: 100%;
+}
+h2 {
+	font: $font-heading;
+	margin: 0;
+}
+h3 {
+	font: $font-heading;
+	font-size: 2rem;
+}

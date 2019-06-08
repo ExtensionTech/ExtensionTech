@@ -1,0 +1,13 @@
+$font-heading: normal 900 6rem "Montserrat";
+$font-text: normal 600 1rem "Nunito";
+$pri-btn-color: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+$sec-btn-color: linear-gradient(141deg, #b884c7 0%, #833c98 51%, #6e2784 75%);
+@mixin btn($color){
+	padding: .4rem 2rem;
+	text-align: center;
+	color: white;
+	font-weight: 700;
+	border-radius: 25px;
+	background-image: $color;
+}
+

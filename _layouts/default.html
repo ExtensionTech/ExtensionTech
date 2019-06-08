@@ -26,20 +26,19 @@ layout: compress
  <style type="text/css">
   
     {% capture critical %}
-      {% include styles.scss %}
+      {% include critical.scss %}
     {% endcapture %}
 
     {{ critical | scssify }}
   
-  </style>
-   {% if page.critical %}
+  {% if page.critical %}
    {% capture criticalpage %}
     {% include {{ page.critical }} %}
    {% endcapture %}
-   <style>
-    {{ criticalpage }}
-  </style>
+    {{ criticalpage | scssify }}
   {% endif %}
+  </style>
+   
 
 	<link media="screen" href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
 	<link media="screen" href="https://fonts.googleapis.com/css?family=Nunito:600&display=swap" rel="stylesheet">
@@ -48,25 +47,32 @@ layout: compress
 </head>
 
 <body>
-	<!--[if IE]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-	<![endif]-->
-		{% include navigation.html %}
-		{{ content }}
-	<!--<script defer src=""{{ "/assets/js/vendor/modernizr-3.7.1.min.js" | relative_url }}"></script>
-	<script defer src="{{ "/assets/js/vendor/jquery-3.4.1.min.js" | relative_url }}"></script>-->
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>
-	
-	<script defer src="{{ "/assets/js/plugins.js" | relative_url }}"></script>
-	<script defer src="{{ "/assets/js/main.js" | relative_url }}" ></script>
+	<div class="main">
+		<!--[if IE]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+			{% include navigation.html %}
+			{{ content }}
+		<!--<script defer src=""{{ "/assets/js/vendor/modernizr-3.7.1.min.js" | relative_url }}"></script>
+		<script defer src="{{ "/assets/js/vendor/jquery-3.4.1.min.js" | relative_url }}"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js" crossorigin="anonymous"></script>
+		
+		
+		<script defer src="{{ "/assets/js/plugins.js" | relative_url }}"></script>
+		<script defer src="{{ "/assets/js/main.js" | relative_url }}" ></script>-->
 
-	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-	<script>
-		window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-		ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-	</script>
-	<script defer src="https://www.google-analytics.com/analytics.js" async defer></script>
+	{% if page.css %}
+				<link rel="stylesheet" href="{{ page.css | relative_url }}">
+	{% endif %}
+		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+		<script>
+			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+		</script>
+		<script defer src="https://www.google-analytics.com/analytics.js" async defer></script> -->
+	</div>
 </body>
 
 </html>

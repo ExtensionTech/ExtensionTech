@@ -1,25 +1,30 @@
+//Fonts and Page Initalisation
+
 body {
 	margin: 0;
-	padding: 2rem 8rem;
-	font-family: "Nunito";
+	padding: 2rem 2rem;
+	font: $font-text;
 }
 
+
+
+.cta-btn-pri {
+	@include btn($pri-btn-color);
+}
+
+.cta-btn-sec {
+	@include btn($sec-btn-color);
+}
+
+
+// Navigation 
 a {
 	text-decoration: none;
 	color: #3b3b3b;
 	font-size: 1.7rem;
-	font-weight: 600;
 }
 a:hover {
 	color: #0094cc;
-}
-.cta-button-blue {
-	padding: .4rem 2rem;
-	text-align: center;
-	color: white;
-	font-weight: 700;
-	border-radius: 25px;
-	background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 nav {
@@ -57,28 +62,4 @@ nav ul li {
 nav ul li ul {
 	display: none;
 }
-header {
-	display: grid;
-	grid-template-areas: 'content image';
-}
-header div {
-	justify-self: start;
-	align-self:  center;
-}
-header .header-image {
-	justify-self: end;
-}
-.header-image img {
-	height: 100%;
-}
-h2 {
-	font-family: "Montserrat";
-	font-weight: 900;
-	font-size: 6rem;
-	margin: 0;
-}
-h3 {
-	font-size: 2rem;
-	font-family: "Montserrat";
-	font-weight: 900;
-}
+

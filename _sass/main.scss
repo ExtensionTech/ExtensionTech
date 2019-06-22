@@ -12,54 +12,15 @@ body {
 	@include btn($pri-btn-color);
 }
 
+#dropdown-btn-pri{
+	@include btn($pri-btn-color);
+}
+
 .cta-btn-sec {
 	@include btn($sec-btn-color);
 }
 
 
 // Navigation 
-a {
-	text-decoration: none;
-	color: #3b3b3b;
-	font-size: 1.7rem;
-}
-a:hover {
-	color: #0094cc;
-}
 
-nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-nav .brand-logo {
-	min-width: 30%;
-}
-nav ul {
-	display: none;
-}
-@media only screen and (min-width: 800px) {
-	nav ul {
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-}
-nav ul li {
-	padding: 0 1rem;
-}
-.sidenav-trigger span {
-	display: none;
-}
-@media only screen and (min-width: 800px) {
-	nav .hamgburger {
-		display: none;
-	}
-}
-nav ul li ul {
-	display: none;
-}
 

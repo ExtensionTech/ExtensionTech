@@ -7,6 +7,7 @@ navigation:
     pages:
       - name: Solutions
         link: /solutions/
+        id: dropdown-main
       - name: Email & Web
         link: /solutions/email-web
       - name: Video & Voice
@@ -27,4 +28,4 @@ navigation:
     pages:
       - name: Contact Us
         link: /contact-us
-        class: cta-btn-pri
+        id: dropdown-btn-pri

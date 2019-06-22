@@ -62,10 +62,12 @@ layout: compress
 		
 		<script defer src="{{ "/assets/js/plugins.js" | relative_url }}"></script>
 		<script defer src="{{ "/assets/js/main.js" | relative_url }}" ></script>-->
-
-	{% if page.css %}
-				<link rel="stylesheet" href="{{ page.css | relative_url }}">
-	{% endif %}
+		{% if page.css %}
+					<link rel="stylesheet" href="{{ page.css | relative_url }}">
+		{% endif %}
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js" crossorigin="anonymous"></script>
+		<script defer src="{{ "/assets/js/main.js" | relative_url }}" ></script>
 		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
 		<script>
 			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;

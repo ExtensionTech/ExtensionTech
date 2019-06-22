@@ -6,13 +6,16 @@
 			<img src="{{ "/assets/images/logo.png" | relative_url }}" alt="Extension Logo" >
 		</picture>
 	</a>
-	<a href="#" class="sidenav-trigger"><img class="hamgburger" alt="mobile nav link" src="{{ "/assets/images/hamburger.png" | relative_url }}"><span>Mobile Nav</span></a>
-	<ul class="ext-nav+">
+	<div class="navToggle">
+		<div class="icon-left"></div>
+		<div class="icon-right"></div>
+	</div>
+	<ul class="ext-nav">
 	{% for item in site.data.navigation.navigation %}
-		<li><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].class %}class="{{item.pages[0].class}}"{% endif %} >{{ item.name }}</a>
+		<li {% if item.pages.size > 1 %} class="dropdown-nav" {% endif %} ><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].id %} id="{{item.pages[0].id}}" {% endif %} >{{ item.name }}</a>
 		{% if item.pages.size > 1 %}
 		
-			<ul>
+			<ul class="dropdown">
 			{% for subpage in item.pages offset:1 %}
 				<li><a href="{{ subpage.link | relative_url }}" {% if page.url == subpage.link %}class="current"{% endif %}>{{ subpage.name }}</a></li>
 			{% endfor %}

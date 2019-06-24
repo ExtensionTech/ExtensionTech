@@ -7,4 +7,5 @@ $(".navToggle").click (function(){
 });
 $(".dropdown-nav").click (function(){
 	$(".dropdown-nav").toggleClass("open");
+	$("#dropdown-main").toggleClass("open");
 });

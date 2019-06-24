@@ -103,13 +103,20 @@ nav{
 	.ext-nav {
 		padding-top: 100px;
 		padding-left: 0;
+		display: flex;
+		flex-direction: column;
 	}
 	ul{
 		li{
 			list-style: none;
-			padding: 1em 2em 1em 1.5em;
+			//padding: 1em 2em 1em 1.5em;
+			width: 100%;
+			height: 3rem;
 			transition: all 0.5s;
-				text-align: center;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			
 			a{
 				display: inline-block;
@@ -136,9 +143,13 @@ nav{
 	& .dropdown-nav {
 		position: relative;
 		overflow: hidden;
-		max-height: 1.1rem;
+		display: block;
+		max-height: 3rem;
 		transition-duration: 0.5s;
 		transition-timing-function: swing;
+		ul {
+			padding-left: 0;
+		}
 		li {
 			padding-left: 0;
 			//transition: all 0.5s;
@@ -147,9 +158,13 @@ nav{
 			}
 		}
 		&.open {
-			max-height: 500px;
+			max-height: 21rem;
+			height: 21rem;
 			transition: max-height 0.5s ease-in;
 		}
+	}
+	#dropdown-main {
+		padding: 1rem 0;
 	}
 }
 

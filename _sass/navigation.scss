@@ -3,7 +3,8 @@
 
 $dark: rgba(0,0,0, 0.87);
 $light: #efefef;
-$color: #b3e5fc;
+$color: #2cb5e8;
+$color-sec: #6e2784;
 
 
 a {
@@ -108,6 +109,7 @@ nav{
 			list-style: none;
 			padding: 1em 2em 1em 1.5em;
 			transition: all 0.5s;
+				text-align: center;
 			
 			a{
 				display: inline-block;
@@ -124,22 +126,28 @@ nav{
 				}
 			}
 			&:active {
-				background: darken($color, 10%);
+				//background: darken($color, 10%);
 			}
 			&:last-child {
-				margin-bottom: 1em;
+				//margin-bottom: 1em;
 			}
 		}
 	}
-	& .dropdown {
+	& .dropdown-nav {
 		position: relative;
 		overflow: hidden;
-		max-height: 0rem;
+		max-height: 1.1rem;
+		transition-duration: 0.5s;
+		transition-timing-function: swing;
 		li {
-			transition: all 0.5s;
+			padding-left: 0;
+			//transition: all 0.5s;
+			a {
+				color: $color;
+			}
 		}
 		&.open {
-			max-height: 100%;
+			max-height: 500px;
 			transition: max-height 0.5s ease-in;
 		}
 	}

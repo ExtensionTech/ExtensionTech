@@ -8,6 +8,7 @@ navigation:
       - name: Solutions
         link: /solutions/
         id: dropdown-main
+        class: dropdown-main
       - name: Email & Web
         link: /solutions/email-web
       - name: Video & Voice

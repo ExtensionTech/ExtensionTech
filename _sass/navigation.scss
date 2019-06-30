@@ -198,7 +198,12 @@ nav{
 			max-height: 21rem;
 			height: 21rem;
 			transition: max-height 0.5s ease-in;
+			@media screen and (min-width: $fst-breakpt) {
+				max-height: 3rem;
+				height: 5rem;
+			}
 		}
+		
 		&:hover {
 			.dropdown {
 				visibility: visible;
@@ -213,13 +218,14 @@ nav{
 		}
 	}
 	.dropdown {
+		box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
 		@media screen and (min-width: $fst-breakpt) {
 			visibility: hidden;
 			position: absolute;
 			min-width: 20rem;
 			margin-top: 1.4rem;
 			left: 0;
-			background: $color-sec;
+			background: white;
 			transition: all 0.3s ease;
 			opacity: 0; 
 			&:hover {
@@ -228,6 +234,9 @@ nav{
 			}
 			li {
 				padding: 0;
+				&:hover {
+					background: #b2b2b238 !important;
+				}
 			}
 		}
 	}

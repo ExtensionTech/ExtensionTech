@@ -6,7 +6,7 @@ $light: #efefef;
 $color: #2cb5e8;
 $color-sec: #6e2784;
 $fst-breakpt : 767px;
-
+$snd-breakpt : 1025px;
 
 a {
 	text-decoration: none;
@@ -81,12 +81,12 @@ nav{
 		top: 10px;
 		left: 32px;
 	}
-	
+
 	&.open{
-		max-height: 700px;
+		max-height: 80rem;
 		transition: max-height 0.5s ease-in;
 	}
-	
+
 	h2 {
 		transition: 0.5s;
 		position: absolute;
@@ -104,7 +104,7 @@ nav{
 		}
 	}
 	.ext-nav {
-		padding: 7rem 0 .5rem 0;
+		padding: 7rem 0 0 0;
 		display: flex;
 		margin: 0;
 		flex-direction: column;
@@ -113,8 +113,8 @@ nav{
 			flex-direction: row;
 			justify-content: flex-end;
 		}
-		li:not(:nth-child(n+3)){
-			border-bottom: 1px solid #b2b2b2;
+		li{
+			border-top: 2px solid #b2b2b2;
 			@media screen and (min-width: $fst-breakpt) {
 				border: none;
 			}
@@ -125,20 +125,24 @@ nav{
 			list-style: none;
 			//padding: 1em 2em 1em 1.5em;
 			width: 100%;
-			height: 3rem;
 			transition: all 0.5s;
 			text-align: center;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			
+
 			a{
 				display: inline-block;
 				text-decoration: none;
 				font-size: 1.1em;
+				width: 100%;
+				padding: 1rem;
 				color: $dark;
+				@media screen and (min-width: $fst-breakpt) {
+					padding: 2.4rem;
+				}
 			}
-			
+
 			&:hover {
 				@media screen and (min-width: $fst-breakpt) {
 					&:not(:last-child) {
@@ -156,7 +160,6 @@ nav{
 				//margin-bottom: 1em;
 			}
 			@media screen and (min-width: $fst-breakpt) {
-				padding: 1.5rem 1rem;
 				width: auto;
 			}
 		}
@@ -164,46 +167,40 @@ nav{
 	& .dropdown-nav {
 		position: relative;
 		overflow: hidden;
-		display: block;
-		max-height: 3rem;
+		//display: block;
 		@media screen and (min-width: $fst-breakpt) {
 			overflow: visible;
-		}
-		span {
-			content: '';
-			position: absolute;
-			margin: 20px 0 0 30px;
-			width: 10px;
-			height: 10px;
-			border-top: solid 1px currentColor;
-			border-right: solid 1px currentColor;
-			-webkit-transform: rotate(135deg);
-			transform: rotate(135deg);
-			@media screen and (min-width: $fst-breakpt) {
-				display: none;
-			}
 		}
 		ul {
 			padding-left: 0;
 		}
 		li {
 			padding-left: 0;
-			border-bottom: 0!important;
+			border-top: 0!important;
 			//transition: all 0.5s;
 			a {
 				color: $color;
 			}
 		}
 		&.open {
-			max-height: 21rem;
-			height: 21rem;
+			display: flex;
+			flex-direction: column;
 			transition: max-height 0.5s ease-in;
+			padding-bottom: 2rem;
+			.dropdown {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				a {
+					padding: 1rem;
+				}
+			}
 			@media screen and (min-width: $fst-breakpt) {
 				max-height: 3rem;
 				height: 5rem;
 			}
 		}
-		
+
 		&:hover {
 			.dropdown {
 				visibility: visible;
@@ -211,26 +208,28 @@ nav{
 			}
 		}
 	}
-	#dropdown-main {
-		padding: 1rem 0;
-		@media screen and (min-width: $fst-breakpt) {
-			padding: .8rem;
-		}
-	}
 	.dropdown {
-		box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
+
+		display: none;
 		@media screen and (min-width: $fst-breakpt) {
+			box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
 			visibility: hidden;
+			display: flex;
+			flex-direction: column;
 			position: absolute;
 			min-width: 20rem;
-			margin-top: 1.4rem;
 			left: 0;
+			top: 6.4rem;
 			background: white;
 			transition: all 0.3s ease;
-			opacity: 0; 
+			opacity: 0;
 			&:hover {
 				visibility: visible;
 				opacity: 1;
+				display: flex;
+				flex-direction: column;
+				margin: 0;
+				width: 100%;
 			}
 			li {
 				padding: 0;
@@ -244,41 +243,41 @@ nav{
 
 .navToggle{
 	@include navToggle(32px, 20px);
-	
+
 	&:hover{
 			cursor: pointer;
 	}
-	
+
 	.icon-left {
 		@include icon(4px, 15px);
-		
+
 		&:before{
 			@include icon-before(4px, 15px);
 		}
-		
+
 		&:after{
 			@include icon-after(4px, 15px);
 		}
 	}
-	
+
 	.icon-right {
 		@include icon(4px, 15px);
 		left: 15px;
-		
+
 		&:before{
 			@include icon-before(4px, 15px);
 		}
-		
+
 		&:after{
 			@include icon-after(4px, 15px);
 		}
 	}
-	
+
 	&.open {
 		.icon-left {
 			transition-duration: 0.5s;
 			background: transparent;
-			
+
 			&:before{
 				transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
 			}
@@ -287,11 +286,11 @@ nav{
 				transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
 			}
 		}
-		
+
 		.icon-right {
 			transition-duration: 0.5s;
-			background: transparent;	
-			
+			background: transparent;
+
 			&:before{
 				transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
 			}

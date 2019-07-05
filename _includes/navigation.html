@@ -12,9 +12,9 @@
 	</div>
 	<ul class="ext-nav">
 	{% for item in site.data.navigation.navigation %}
-		<li {% if item.pages.size > 1 %} class="dropdown-nav" {% endif %} ><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].id %} id="{{item.pages[0].id}}" {% endif %} >{{ item.name }}</a>{% if item.pages.size > 1 %} <span></span> {% endif %}
+		<li {% if item.pages.size > 1 %} class="dropdown-nav" {% endif %} ><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].id %} id="{{item.pages[0].id}}" {% endif %} >{{ item.name }}</a>
 		{% if item.pages.size > 1 %}
-		
+
 			<ul class="dropdown">
 			{% for subpage in item.pages offset:1 %}
 				<li><a href="{{ subpage.link | relative_url }}" {% if page.url == subpage.link %}class="current"{% endif %}>{{ subpage.name }}</a></li>
@@ -25,8 +25,3 @@
 	{% endfor %}
 	</ul>
 </nav>
-
-
-
-
-

@@ -8,6 +8,7 @@ $(".navToggle").click (function(){
 $(".dropdown-nav").click (function(){
 	$(".dropdown-nav").toggleClass("open");
 	$("#dropdown-main").toggleClass("open");
+	$(".arrow").toggleClass("open");
 });
 /*
 $(".dropdown-nav").on('touchstart', function (e) {

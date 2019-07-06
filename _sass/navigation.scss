@@ -199,6 +199,10 @@ nav{
 					padding: 3px;
 					transform: rotate(45deg);
 					-webkit-transform: rotate(45deg);
+					&.open {
+						transform: rotate(-135deg);
+						-webkit-transform: rotate(-135deg);
+					}
 				}
 			}
 			@media screen and (min-width: $fst-breakpt) {

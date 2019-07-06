@@ -12,7 +12,7 @@
 	</div>
 	<ul class="ext-nav">
 	{% for item in site.data.navigation.navigation %}
-		<li {% if item.pages.size > 1 %} class="dropdown-nav" {% endif %} ><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].id %} id="{{item.pages[0].id}}" {% endif %} >{{ item.name }}</a>
+		<li {% if item.pages.size > 1 %} class="dropdown-nav" {% endif %} ><a href="{{ item.pages[0].link | relative_url }}" {% if page.url == item.pages[0].link %}class="current"{% endif %} {% if item.pages[0].id %} id="{{item.pages[0].id}}" {% endif %} >{{ item.name }}</a>{% if item.pages.size > 1 %}<div> <span class="arrow"></span></div> {% endif %}
 		{% if item.pages.size > 1 %}
 
 			<ul class="dropdown">

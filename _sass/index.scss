@@ -1,0 +1,54 @@
+$fst-breakpt : 567px;
+$snd-breakpt: 668px;
+$thrd-breakpt : 1025px;
+.cta-section {
+	background: $pri-btn-color;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem;
+	h2 {
+		font: $font-heading;
+		text-align: center;
+	}
+	.button-div {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		p {
+			text-align: center;
+		}
+		a {
+			width: 100%;
+			font-size: .9rem;
+			margin: 1rem 0;
+		}
+		.cta-btn-trd {
+			color: black;
+		}
+		@media screen and (min-width: $fst-breakpt) {
+			flex-direction: row;
+			justify-content: space-evenly;
+			a {
+				margin: 1rem 0;
+				width: 100%;
+			}
+			.cta-btn-trd {
+				margin-right: 1rem;
+			}
+			.cta-btn-sec {
+				margin-left: 1rem;
+			}
+		}
+		@media screen and (min-width: $thrd-breakpt) {
+			flex-direction: row;
+			justify-content: center;
+			a {
+				margin: 2rem!important;
+				font-size: 1rem;
+				width: 15%;
+			}
+		}
+	}
+}

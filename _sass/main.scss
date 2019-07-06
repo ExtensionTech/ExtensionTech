@@ -1,26 +1,25 @@
 //Fonts and Page Initalisation
-
 body {
 	margin: 0;
 	padding: 2rem 2rem;
 	font: $font-text;
 }
-
-
-
 .cta-btn-pri {
 	@include btn($pri-btn-color);
 }
 
-#dropdown-btn-pri{
+#dropdown-btn-pri {
 	@include btn($pri-btn-color);
+	padding: 2.4rem;
 }
-
 .cta-btn-sec {
 	@include btn($sec-btn-color);
+	border-radius: .4rem;
+}
+.cta-btn-trd {
+	@include btn($trd-btn-color);
+	border-radius: .4rem;
 }
 .main {
 	padding-top: 6rem;
 }
-
-// Navigation

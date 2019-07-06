@@ -1,13 +1,5 @@
 //https://codepen.io/mblode/pen/EGKCu
 
-
-$dark: rgba(0,0,0, 0.87);
-$light: #efefef;
-$color: #2cb5e8;
-$color-sec: #6e2784;
-$fst-breakpt : 1025px;
-$snd-breakpt : 1025px;
-
 a {
 	text-decoration: none;
 	color: #3b3b3b;
@@ -69,7 +61,8 @@ nav{
 	background-color: white;
 	transition-duration: 0.5s;
 	transition-timing-function: swing;
-	position: relative;
+	position: fixed;
+	top: 0;
 	overflow: hidden;
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
 	@media screen and (min-width: $fst-breakpt) {
@@ -197,6 +190,7 @@ nav{
 					border-width: 0 3px 3px 0;
 					display: inline-block;
 					padding: 3px;
+					transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 					transform: rotate(45deg);
 					-webkit-transform: rotate(45deg);
 					&.open {

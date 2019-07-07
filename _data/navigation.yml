@@ -10,16 +10,24 @@ navigation:
         id: dropdown-main
         class: dropdown-main
       - name: Email & Web
+        description: |
+            Email and website hosting for small to medium businesses
+        icon: /assets/images/email.svg
         link: /solutions/email-web
       - name: Video & Voice
         link: /solutions/video-voice
+        icon: /assets/images/video.svg
       - name: Digital Signage
+        icon: /assets/images/signage.svg
         link: /solutions/digital-signage
       - name: Backup
+        icon: /assets/images/backup.svg
         link: /solutions/backup
       - name: Security
         link: /solutions/security
+        icon: /assets/images/security.svg
       - name: Managed Support
+        icon: /assets/images/support.svg
         link: /solutions/managed-support
   - name: Managed Services
     pages:

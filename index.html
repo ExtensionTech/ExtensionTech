@@ -32,17 +32,31 @@ critical: index-critical.scss
 		<a class="cta-btn-sec" href="{{ "collapsible.html" | relative_url }}">Pricing</a>
 	</div>
 </section>
-<section class="services">
+<section class="services-section">
+	<div class="services-header"><span class="purple-bubble"></span><span class="blue-bubble"></span></div>
 	<h3>How Can We Help?</h3>
 	<p>Extension offers a range of services; allow us to find whats best suited to you or pick and chose what matches your requirements.</p>
 	<ul class="services-list">
 	{% for item in site.data.navigation.navigation[1].pages offset:1 %}
 				<li>
 					<img src="{{ item.icon | relative_url }}">
-					<h3>{{ item.name }}</h3>
+					<h4>{{ item.name }}</h4>
 					<span>{{ item.description }}</span>
 					<a href="{{ item.link | relative_url }}">Learn more</a>
 				</li>
 	{% endfor %}
 	</ul>
+	<div class="services-footer"><span class="blue-bubble"></span><span class="purple-bubble"></span></div>
 </section>
+{% comment %}
+
+<section class="partners-section">
+	<h3>Bringing you the best in class from our select partners</h3>
+	<p>We partner with a multitude of suppliers and providers to ensure we can find a solution fit for any situation.</p>
+	{% for item in site.data.partners.partners %}
+		<ul>
+			<li><img alt="{{ item.name }}" src="{{ item.img | relative_url }}"/></li>
+		</ul>
+	{% endfor %}
+</section>
+{% endcomment %}

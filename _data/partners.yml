@@ -1,0 +1,9 @@
+partners:
+  - name: Microsoft
+    img: /assets/images/partner-microsoft.png
+  - name: Cisco
+    img:
+  - name: Fortinet
+    img:
+  - name: Googs
+    img:

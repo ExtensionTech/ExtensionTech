@@ -24,13 +24,13 @@ layout: compress
 	<meta name="msapplication-TileColor" content="#3372DF">
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | relative_url }}">
  <style type="text/css">
-  
+
     {% capture critical %}
       {% include critical.scss %}
     {% endcapture %}
 
     {{ critical | scssify }}
-  
+
   {% if page.critical %}
    {% capture criticalpage %}
     {% include {{ page.critical }} %}
@@ -38,12 +38,12 @@ layout: compress
     {{ criticalpage | scssify }}
   {% endif %}
   </style>
-   
 
-	<link media="screen" href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
-	<link media="screen" href="https://fonts.googleapis.com/css?family=Nunito:600&display=swap" rel="stylesheet">
+
+	<link media="screen" async href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+	<link media="screen" async href="https://fonts.googleapis.com/css?family=Nunito:600&display=swap" rel="stylesheet">
 	<meta name="theme-color" content="#fafafa">
-	
+
 </head>
 
 <body>
@@ -58,12 +58,12 @@ layout: compress
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js" crossorigin="anonymous"></script>
-		
-		
+
+
 		<script defer src="{{ "/assets/js/plugins.js" | relative_url }}"></script>
 		<script defer src="{{ "/assets/js/main.js" | relative_url }}" ></script>-->
 		{% if page.css %}
-					<link rel="stylesheet" href="{{ page.css | relative_url }}">
+					<link media="screen" rel="stylesheet" href="{{ page.css | relative_url }}">
 		{% endif %}
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js" crossorigin="anonymous"></script>

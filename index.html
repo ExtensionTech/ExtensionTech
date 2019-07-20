@@ -48,8 +48,8 @@ critical: index-critical.scss
 	</ul>
 	<div class="services-footer"><span class="blue-bubble"></span><span class="purple-bubble"></span></div>
 </section>
-{% comment %}
 
+{% comment %}
 <section class="partners-section">
 	<h3>Bringing you the best in class from our select partners</h3>
 	<p>We partner with a multitude of suppliers and providers to ensure we can find a solution fit for any situation.</p>
@@ -60,3 +60,20 @@ critical: index-critical.scss
 	{% endfor %}
 </section>
 {% endcomment %}
+
+<section class="cta-consult-section">
+	<div>
+		<div class="cta-header"><span class="purple-bubble"></span><span class="blue-bubble"></span></div>
+		<picture alt="Fiber" >
+			<source type="image/webp" media="all" srcset="{{ "/assets/images/homepage-cta.webp" | relative_url }}">
+			<source type="image/png" media="all" srcset="{{ "/assets/images/homepage-cta.png" | relative_url }}">
+			<img alt="Fiber" src="{{ "/assets/images/homepage-cta.png" | relative_url }}">
+		</picture>
+		<div class="cta-consult-footer"><span class="blue-bubble"></span><span class="purple-bubble"></span></div>
+	</div>
+	<div>
+		<h3>Speak to us about your needs</h3>
+		<p>Our qualified consltants are ready to work with you to assess your needs and build a platform for your business to strive on.
+		Before getting started with the consultation, please complete the pricing calculator and select to contacted for consultation.</p>
+		<a href="{{ pricing.html | relative_url }}">Get Started</a>
+</section>

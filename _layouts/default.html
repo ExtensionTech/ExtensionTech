@@ -1,58 +1,58 @@
 ---
-layout: compress
 ---
 <!doctype html>
 <html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<!--<link media="all" rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">-->
+		<link rel="icon" type="image/png"  href="{{ "/favicon.png" | relative_url }}">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
-	<!--<link media="all" rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">-->
-	<link rel="icon" type="image/png"  href="{{ "/favicon.png" | relative_url }}">
-	<meta name="description" content="{{ page.description }}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="manifest" href="{{ "site.webmanifest" | relative_url }}">
+		<link rel="apple-touch-icon" href="{{ "icon.png" | relative_url }}">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="{{ "/assets/images/android-desktop.png" | relative_url }}">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Extension Technology">
+		<link rel="apple-touch-icon-precomposed" href="{{ "/assets/images/ios-desktop.png" | relative_url }}">
+		<meta name="msapplication-TileImage" content="{{ "/assets/images/touch/ms-touch-icon-144x144-precomposed.png" | relative_url }}">
+		<meta name="msapplication-TileColor" content="#3372DF">
+		<link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | relative_url }}">
+	 <style type="text/css">
+		{% capture critical %}
+			{% include critical.scss %}
+		{% endcapture %}
 
-	<link rel="manifest" href="{{ "site.webmanifest" | relative_url }}">
-	<link rel="apple-touch-icon" href="{{ "icon.png" | relative_url }}">
-	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="icon" sizes="192x192" href="{{ "/assets/images/android-desktop.png" | relative_url }}">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="Extension Technology">
-	<link rel="apple-touch-icon-precomposed" href="{{ "/assets/images/ios-desktop.png" | relative_url }}">
-	<meta name="msapplication-TileImage" content="{{ "/assets/images/touch/ms-touch-icon-144x144-precomposed.png" | relative_url }}">
-	<meta name="msapplication-TileColor" content="#3372DF">
-	<link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | relative_url }}">
- <style type="text/css">
+		{{ critical | scssify }}
 
-    {% capture critical %}
-      {% include critical.scss %}
-    {% endcapture %}
+		{% if page.critical %}
+			{% capture criticalpage %}
+				{% include {{ page.critical }} %}
+			{% endcapture %}
+		{{ criticalpage | scssify }}
+		{% endif %}
+	  </style>
+		<meta name="theme-color" content="#fafafa">
 
-    {{ critical | scssify }}
+	</head>
 
-  {% if page.critical %}
-   {% capture criticalpage %}
-    {% include {{ page.critical }} %}
-   {% endcapture %}
-    {{ criticalpage | scssify }}
-  {% endif %}
-  </style>
-
-
-	<link media="screen" async href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
-	<link media="screen" async href="https://fonts.googleapis.com/css?family=Nunito:600&display=swap" rel="stylesheet">
-	<meta name="theme-color" content="#fafafa">
-
-</head>
-
-<body>
-	<div class="main">
-		<!--[if IE]>
-			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-		<![endif]-->
-			{% include navigation.html %}
-			{{ content }}
+	<body>
+		<div class="main">
+			<!--[if IE]>
+				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+			<![endif]-->
+				{% include navigation.html %}
+				{{ content }}
+		</div>
+		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+		<script>
+			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+		</script>
+		<script defer src="https://www.google-analytics.com/analytics.js" async defer></script> -->
 		<!--<script defer src=""{{ "/assets/js/vendor/modernizr-3.7.1.min.js" | relative_url }}"></script>
 		<script defer src="{{ "/assets/js/vendor/jquery-3.4.1.min.js" | relative_url }}"></script>
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
@@ -68,13 +68,9 @@ layout: compress
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js" crossorigin="anonymous"></script>
 		<script defer src="{{ "/assets/js/main.js" | relative_url }}" ></script>
-		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
-		<script>
-			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-			ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-		</script>
-		<script defer src="https://www.google-analytics.com/analytics.js" async defer></script> -->
-	</div>
-</body>
-
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Nunito:600&display=swap');
+		</style>
+	</body>
 </html>

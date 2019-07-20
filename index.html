@@ -39,7 +39,7 @@ critical: index-critical.scss
 	<ul class="services-list">
 	{% for item in site.data.navigation.navigation[1].pages offset:1 %}
 				<li>
-					<img src="{{ item.icon | relative_url }}">
+					<img src="{{ item.icon | relative_url }}" alt="item.imgdesc">
 					<h4>{{ item.name }}</h4>
 					<span>{{ item.description }}</span>
 					<a href="{{ item.link | relative_url }}">Learn more</a>

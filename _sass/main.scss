@@ -4,6 +4,7 @@ body {
 	padding: 2rem 2rem;
 	font: $font-text;
 }
+
 .cta-btn-pri {
 	@include btn($pri-btn-color);
 }

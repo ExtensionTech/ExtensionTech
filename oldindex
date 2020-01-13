@@ -1,0 +1,79 @@
+---
+title: Home
+description: Extension Technology Gold Coast & Melbourne
+sections:
+  intro: This rocks
+  end: |
+    wow it's bad addss.
+css: assets/css/index.css
+critical: index-critical.scss
+---
+<header>
+	<div>
+		<h2>Connecting Business & Accelerating Innovation</h2>
+		<h3>Managed IT Support Services Gold Coast and Melbourne. </h3>
+		<div class="cta-buttons">
+            <a class="cta-btn-sec" href="{{ "collapsible.html" | relative_url }}">Get Started</a>
+        </div>
+	</div>
+	<div class="header-image">
+		<picture alt="Fiber" >
+			<source type="image/webp" media="all" srcset="{{ "/assets/images/fibrersbanner-desktop.webp" | relative_url }}">
+			<source type="image/png" media="all" srcset="{{ "/assets/images/fibrersbanner-desktop.png" | relative_url }}">
+			<img alt="Fiber" src="{{ "/assets/images/fibrersbanner-desktop.png" | relative_url }}">
+		</picture>
+	</div>
+</header>
+<section class="cta-section">
+	<h2>Get it before it gets too late </h2>
+	<p>We offer a free consultation and business analytis to asset your IT needs. Providing</p>
+	<div class="button-div">
+		<a class="cta-btn-trd" href="{{ "collapsible.html" | relative_url }}">Schedule a Free Consultation</a>
+		<a class="cta-btn-sec" href="{{ "collapsible.html" | relative_url }}">Pricing</a>
+	</div>
+</section>
+<section class="services-section">
+	<div class="services-header"><span class="purple-bubble"></span><span class="blue-bubble"></span></div>
+	<h3>How Can We Help?</h3>
+	<p>Extension offers a range of services; allow us to find whats best suited to you or pick and chose what matches your requirements.</p>
+	<ul class="services-list">
+	{% for item in site.data.navigation.navigation[1].pages offset:1 %}
+				<li>
+					<img src="{{ item.icon | relative_url }}" alt="item.imgdesc">
+					<h4>{{ item.name }}</h4>
+					<span>{{ item.description }}</span>
+					<a href="{{ item.link | relative_url }}">Learn more</a>
+				</li>
+	{% endfor %}
+	</ul>
+	<div class="services-footer"><span class="blue-bubble"></span><span class="purple-bubble"></span></div>
+</section>
+
+{% comment %}
+<section class="partners-section">
+	<h3>Bringing you the best in class from our select partners</h3>
+	<p>We partner with a multitude of suppliers and providers to ensure we can find a solution fit for any situation.</p>
+	{% for item in site.data.partners.partners %}
+		<ul>
+			<li><img alt="{{ item.name }}" src="{{ item.img | relative_url }}"/></li>
+		</ul>
+	{% endfor %}
+</section>
+{% endcomment %}
+
+<section class="cta-consult-section">
+	<div>
+		<div class="cta-header"><span class="purple-bubble"></span><span class="blue-bubble"></span></div>
+		<picture alt="Fiber" >
+			<source type="image/webp" media="all" srcset="{{ "/assets/images/homepage-cta.webp" | relative_url }}">
+			<source type="image/png" media="all" srcset="{{ "/assets/images/homepage-cta.png" | relative_url }}">
+			<img alt="Fiber" src="{{ "/assets/images/homepage-cta.png" | relative_url }}">
+		</picture>
+		<div class="cta-consult-footer"><span class="blue-bubble"></span><span class="purple-bubble"></span></div>
+	</div>
+	<div>
+		<h3>Speak to us about your needs</h3>
+		<p>Our qualified consltants are ready to work with you to assess your needs and build a platform for your business to strive on.
+		Before getting started with the consultation, please complete the pricing calculator and select to contacted for consultation.</p>
+		<a href="{{ pricing.html | relative_url }}">Get Started</a>
+</section>
